@@ -16,6 +16,7 @@ public class AmazonTest1 {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\TSANYAL\\git\\repository\\SeleniumMaven1\\driver\\chromedriver.exe");
 		PageObjectModel.driver=new ChromeDriver();
 		PageObjectModel.driver.manage().window().maximize();
+		PageObjectModel.implicit_wait();
 	}
 	
 	@BeforeMethod
@@ -28,7 +29,12 @@ public class AmazonTest1 {
 	public static void test() {
 		
 		PageObjectModel.work_flow();
+		PageObjectModel.login_with_credentials();
+		PageObjectModel.verify_successful_login();
+		
 	}
+	
+	
 	@AfterMethod
 	public static void tear_down() {
 		
