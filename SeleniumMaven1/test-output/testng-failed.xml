@@ -10,7 +10,7 @@
     <classes>
       <class name="test.AmazonTest1">
         <methods>
-          <include name="test3"/>
+          <include name="test5"/>
         </methods>
       </class> <!-- test.AmazonTest1 -->
     </classes>

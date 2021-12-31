@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import excel.Dataread;
 import pom.PageObjectModel;
 
 public class AmazonTest1 {
@@ -21,7 +22,7 @@ public class AmazonTest1 {
 		PageObjectModel.implicit_wait();
 	}*/
 	
-	@BeforeMethod
+	//@BeforeMethod
 	public static void setup() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\TSANYAL\\git\\repository\\SeleniumMaven1\\driver\\chromedriver.exe");
 		PageObjectModel.driver=new ChromeDriver();
@@ -30,7 +31,7 @@ public class AmazonTest1 {
 		PageObjectModel.get_url();
 		
 	}
-	@Test(groups= {"strong_ties"})
+	//@Test(groups= {"strong_ties"})
 	public static void test1() throws IOException {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\TSANYAL\\git\\repository\\SeleniumMaven1\\driver\\chromedriver.exe");
 		PageObjectModel.driver=new ChromeDriver();
@@ -41,7 +42,7 @@ public class AmazonTest1 {
 		PageObjectModel.work_flow();
 		
 	}
-	@Test(groups= {"strong_ties"})
+	//@Test(groups= {"strong_ties"})
 	public static void test2() throws IOException {
 		
 
@@ -49,16 +50,31 @@ public class AmazonTest1 {
 
 		
 	}
-	@Test(groups= {"strong_ties"})
+	//@Test(groups= {"strong_ties"})
 	public static void test3() throws IOException {
 		
 
 		PageObjectModel.verify_successful_login();
 		
 	}
+	//@Test(groups= {"strong_ties"})
+	public static void test4() throws IOException {
+		
+
+		Dataread.read();
+		
+		
+	}
+	@Test(groups= {"strong_ties"})
+	public static void test5() throws IOException {
+		
+
+		Dataread.readcellvalue("Test","Tathagata Sanyal");
+		PageObjectModel.driver.close();
+		
+	}
 	
-	
-	@AfterMethod
+	//@AfterMethod
 	public static void tear_down() {
 		
 		PageObjectModel.driver.close();	
